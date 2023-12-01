@@ -41,9 +41,9 @@ public class webDriver {
     	if (segundaIniciacao == false) {
 	    	System.setProperty("webdriver.chrome.driver", CHROME_DRIVER_PATH);
 	        driver = new ChromeDriver();
-	        String scriptMiniBit = copiaAPI(driver);
+	        String yourScript = copiaAPI(driver);
 	        abreWhatsapp();
-	        injetaScript(scriptMiniBit, driver);
+	        injetaScript(yourScript, driver);
 	        executorService.execute(() -> {
 	            try {
 	                Thread.sleep(1000);
